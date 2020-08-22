@@ -1,0 +1,75 @@
+<div fxLayout="column" fxLayoutAlign="center center" style="padding: 20px;">
+    <mat-card>
+        <mat-card-header fxLayoutAlign="center">
+            <mat-card-title>Employee Details</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+
+            <form [formGroup]="Employeeform">
+                <div fxLayout="column" fxLayoutAlign="center">
+
+
+
+
+                    <div fxLayout="row" fxLayoutAlign="center">
+                        <mat-form-field>
+                            <mat-label>name</mat-label>
+                            <input matInput placeholder="Employee Name" [(ngModel)]="employee.name"
+                                formControlName="name" required>
+
+                        </mat-form-field>
+
+                    </div>
+
+                    <div fxLayout="row" fxLayoutAlign="center">
+                        <mat-form-field>
+                            <mat-label>Company Name</mat-label>
+                            <input matInput placeholder="Company Name" [(ngModel)]="employee.companyname"
+                                formControlName="companyname" required>
+
+                        </mat-form-field>
+                    </div>
+
+                    <div fxLayout="row" fxLayoutAlign="center">
+                        <mat-form-field>
+                            <input type="text" matInput placeholder="Emailid" [(ngModel)]="employee.email"
+                                formControlName="email" required>
+
+
+                        </mat-form-field>
+                    </div>
+
+                    <div fxLayout="row" fxLayoutAlign="center">
+                        <mat-form-field>
+                            <input type="text" matInput placeholder="contact Number" [(ngModel)]="employee.contactno"
+                                formControlName="contactno" required>
+
+
+                        </mat-form-field>
+                    </div>
+                    <div fxLayout="row" fxLayoutAlign="center">
+                        <mat-form-field>
+                            <input type="text" matInput placeholder="Designation" [(ngModel)]="employee.designation"
+                                formControlName="designation" required>
+
+
+                        </mat-form-field>
+                    </div>
+                    <div fxLayout="row" fxLayoutAlign="center center">
+                        <button mat-raised-button color="primary" (click)="updateEmployee()">update</button>
+
+
+                        <button mat-raised-button color="primary" type="submit"
+                            (click)="cancelEmployee()">cancel</button>
+                    </div>
+                </div>
+            </form>
+
+
+
+
+
+
+        </mat-card-content>
+    </mat-card>
+</div>

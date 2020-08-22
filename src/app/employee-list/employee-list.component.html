@@ -1,0 +1,11 @@
+<div fxLayout="column" style="padding:10px;">
+  <div style="margin-bottom: 1em;">
+    <button mat-raised-button color="primary" (click)="addEmployee()">Add Employee</button>
+  </div>
+
+
+  <div *ngFor='let employee of filteredList'>
+    <app-employee-details [employee]='employee' (refreshEmployeeList)="refreshList()">
+    </app-employee-details>
+  </div>
+</div>
